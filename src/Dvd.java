@@ -28,5 +28,4 @@ public class Dvd extends Produto {
 		}
 		return getPreco() - desconto;
 	}
-
 }

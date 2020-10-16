@@ -25,7 +25,4 @@ public class Cd extends Produto {
 		float preco_a_vista = getPreco() - (getPreco() * getDeconto_a_vista());
 		return preco_a_vista;
 	}
-	
-	
-
 }
