@@ -17,46 +17,49 @@ public class PrincipalClasse {
 			System.out.println("5 - Relatório geral;");
 			System.out.println("6 - Sair.");
 			
-			opcao = s.nextInt();
-			switch (opcao) {
-			case 1:
-				System.out.println("Qual produto gostaria de cadastrar?");
-				while (produto != 4) {
-					System.out.println("1 - CD;");
-					System.out.println("2 - DVD;");
-					System.out.println("3 - Livro;");
-					System.out.println("4 - Retornar ao menu anterior.");
-					
-					produto = s.nextInt();
-					if (produto != 4 ) {
-						if (produto > 0 && produto < 5) {
-							mp.cadastrarProduto(produto);
-							System.out.println("Deseja cadastrar um novo produto?");
-						} else {
-							System.out.println("Opção inválida, tente novamente.");
-							produto = s.nextInt();
+			try {
+				opcao = s.nextInt();
+				switch (opcao) {
+				case 1:
+					System.out.println("Qual produto gostaria de cadastrar?");
+					while (produto != 4) {
+						System.out.println("1 - CD;");
+						System.out.println("2 - DVD;");
+						System.out.println("3 - Livro;");
+						System.out.println("4 - Retornar ao menu anterior.");
+						
+						produto = s.nextInt();
+						if (produto != 4 ) {
+							if (produto > 0 && produto < 5) {
+								mp.cadastrarProduto(produto);
+								System.out.println("Deseja cadastrar um novo produto?");
+							} else {
+								System.out.println("Opção inválida, tente novamente.");
+							}
 						}
 					}
+					break;
+				case 2:
+					mp.consultarProduto();		
+					break;
+				case 3:
+					mp.alterarProduto();
+					break;
+				case 4:
+					mp.removerProduto();
+					break;
+				case 5:
+					mp.getRelatorio();
+					break;
+				case 6:
+					opcao = 7;
+					break;
+				default:
+					System.out.println("Opção inválida!");
+					break;
 				}
-				break;
-			case 2:
-				mp.consultarProduto();		
-				break;
-			case 3:
-				mp.alterarProduto();
-				break;
-			case 4:
-				mp.removerProduto();
-				break;
-			case 5:
-				mp.getRelatorio();
-				break;
-			case 6:
-				opcao = 7;
-				break;
-			default:
-				System.out.println("Opção inválida!");
-				break;
+			} catch (Exception e) {
+				System.out.println("Erro na entrada de dados.");
 			}
 		}
 	}

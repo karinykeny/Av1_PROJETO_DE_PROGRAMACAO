@@ -30,6 +30,22 @@ public class Produto {
 		return deconto_a_vista;
 	}
 
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setPreco(float preco) {
+		this.preco = preco;
+	}
+
+	public void setDeconto_a_vista(float deconto_a_vista) {
+		this.deconto_a_vista = deconto_a_vista;
+	}
+
 	float precoAVista() {
 		return 0;
 	}

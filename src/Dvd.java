@@ -10,6 +10,22 @@ public class Dvd extends Produto {
 		this.duracao = duracao;
 	}
 
+	public String getDiretor() {
+		return diretor;
+	}
+
+	public void setDiretor(String diretor) {
+		this.diretor = diretor;
+	}
+
+	public String getDuracao() {
+		return duracao;
+	}
+
+	public void setDuracao(String duracao) {
+		this.duracao = duracao;
+	}
+
 	@Override
 	String descritivo() {
 		return "DVD -> Código: " + getCodigo() +

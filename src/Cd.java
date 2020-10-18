@@ -10,6 +10,22 @@ public class Cd extends Produto {
 		this.produtor = produtor;
 	}
 
+	public String getCantor() {
+		return cantor;
+	}
+
+	public void setCantor(String cantor) {
+		this.cantor = cantor;
+	}
+
+	public String getProdutor() {
+		return produtor;
+	}
+
+	public void setProdutor(String produtor) {
+		this.produtor = produtor;
+	}
+
 	@Override
 	String descritivo() {
 		return "CD -> Código: " + getCodigo() +
